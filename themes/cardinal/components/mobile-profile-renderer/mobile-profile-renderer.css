@@ -1,0 +1,14 @@
+.card-body img{
+  float:left;
+  margin-right: 10px;
+}
+
+.card-body span{
+  float:left;
+  line-height: 50px;
+}
+
+.profile{
+  padding: 5px;
+}
+

@@ -1,0 +1,48 @@
+@import url("../../../commons/fonts/font-awesome.min.css");
+@import url("../../../commons/bootstrap/css/bootstrap.min.css");
+
+* {
+  outline: none !important;
+}
+
+:host {
+  scroll-behavior: smooth;
+}
+
+:host {
+  display: block;
+  font-family: nunito;
+}
+
+nav {
+  width: 100%;
+  line-height: 2.375rem;
+  background-color: #fff !important;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+  margin: 0;
+  padding: 18px;
+}
+
+nav h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #5a5c69;
+}
+
+.page-content {
+  padding: 20px;
+  color: #3d3e44;
+}
+
+@media(max-width:960px){
+  .page-content {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1460px){
+  .container {
+    max-width: 1400px;
+  }
+}

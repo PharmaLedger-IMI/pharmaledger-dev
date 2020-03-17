@@ -1,0 +1,34 @@
+@import url(../../../commons/fonts/font-awesome.min.css);
+@import url(../../../commons/bootstrap/css/bootstrap.min.css);
+* {
+    outline: none !important;
+}
+
+:host {
+    scroll-behavior: smooth;
+}
+
+:host {
+    display: block;
+    font-family: nunito;
+}
+
+nav {
+    width: 100%;
+    line-height: 4.375rem;
+    background-color: #fff !important;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+    margin-bottom: 20px;
+    padding: 18px;
+}
+
+nav h3 {
+    margin-bottom: 0;
+    padding: 0 0 0 20px;
+    font-size: 1.75rem;
+    color: #5a5c69;
+}
+
+.page-content {
+    color: #3d3e44;
+}

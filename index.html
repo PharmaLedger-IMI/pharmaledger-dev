@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cardinal.js - Mini Framework for building web applications</title>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+    <psk-app-root controller="DefaultApplicationController">
+        <header>
+            <img class="cardinal-logo" width="38px" height="38px" src="/assets/images/cardinal.png" />
+            <app-menu></app-menu>
+        </header>
+        <section>
+            <psk-app-router failRedirectTo="/home"></psk-app-router>
+        </section>
+    </psk-app-root>
+
+    <script src="/scripts/privatesky/webshims.js"></script>
+    <script src="/scripts/privatesky/bindableModel.js"></script>
+    <script>
+        //temporary fix
+        $$.log = $$.err = console.log;
+    </script>
+
+    <script type="module" src="/scripts/app.js"></script>
+    <script type="module" src="/cardinal/cardinal.esm.js"></script>
+    <script nomodule src="/cardinal.js"></script>
+    <script>
+        globalConfig = {
+            theme: "default"
+        }
+    </script>
+</body>
+
+</html>

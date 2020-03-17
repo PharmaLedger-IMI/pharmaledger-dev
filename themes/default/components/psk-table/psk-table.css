@@ -1,0 +1,19 @@
+* {
+    outline: none !important;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+thead,
+tfoot {
+    font-weight: bold;
+}
+
+th,
+td {
+    border: black 1px solid;
+    word-wrap: break-down;
+}

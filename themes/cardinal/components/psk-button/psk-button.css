@@ -1,0 +1,32 @@
+@import url("../../assets/bootstrap/css/bootstrap.min.css");
+
+
+.btn-primary {
+    color: #5d7d3f;
+    background-color: #FFF;
+    border: 2px solid #5d7d3f;
+    border-radius: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #5d7d3f;
+    background-color: #FFF;
+    border: 2px solid #5d7d3f;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    color: #FFFF;
+    background-color: #5d7d3f;
+    border: 2px solid #5d7d3f;
+}
+
+.no-style{
+    border:none;
+    background:none;
+    outline: 0;
+    opacity: 0.8;
+}
+.no-style:hover{
+    opacity: 1;
+}

@@ -1,0 +1,10 @@
+@import url("../../assets/bootstrap/css/bootstrap.min.css");
+
+input[type=file].form-control-sm{
+  padding-left: 0;
+  display: none;
+}
+
+label{
+  cursor: pointer;
+}

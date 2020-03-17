@@ -1,0 +1,23 @@
+@import url("../../../commons/bootstrap/css/bootstrap.min.css");
+h3{
+    align-self: center;
+}
+
+.render-list {
+    margin:15px 0px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid #DDD;
+    display: block;
+}
+
+.render-list:hover{
+    cursor:pointer;
+    background-color:#e7f9d6 ;
+}
+
+.render-list.active{
+    background-color:#dbf2c5 ;
+    border-left: 5px solid #7aa354;
+}

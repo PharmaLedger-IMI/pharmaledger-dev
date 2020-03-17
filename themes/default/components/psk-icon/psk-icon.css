@@ -1,0 +1,11 @@
+@import url(../../../commons/fonts/font-awesome.min.css);
+@import url(../../../commons/bootstrap/css/bootstrap.min.css);
+:host {
+    font-size: 20px;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.icon.disable-color {
+    color: #999 !important;
+}

@@ -1,0 +1,12 @@
+@import url(../../../commons/bootstrap/css/bootstrap.min.css);
+:host {
+    width: 100%;
+}
+
+.navbar {
+    padding: .5rem 1rem .5rem 0;
+}
+
+.navbar-brand {
+    padding: 5px;
+}

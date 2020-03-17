@@ -1,0 +1,12 @@
+{
+    "name": "Cardinal.Js",
+    "version": "1.0.0",
+    "description": "Cardinal.Js - PrivateSky Website Core for building self sovereign applications",
+    "scripts": {
+        "web": "ws --spa ./index.html"
+    },
+    "devDependencies": {
+        "local-web-server": "^3.0.7"
+    },
+    "license": "MIT"
+}

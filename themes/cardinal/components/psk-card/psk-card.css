@@ -1,0 +1,56 @@
+* {
+  outline: none !important;
+}
+
+:host {
+  display: block;
+  font-family: nunito;
+}
+
+.card.psk-card {
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+}
+
+.card-header {
+  display: flex;
+  flex: 1;
+}
+
+
+/** first level*/
+
+.psk-card .card-header {
+  background: none;
+  border-bottom: none;
+  font-size: 130%;
+  padding-bottom: 0;
+}
+
+.psk-card p.subtitle {
+  color: rgba(255, 0, 0, .75);
+  margin-top: -10px;
+}
+
+
+/** second level*/
+
+.psk-card .psk-card .card-header {
+  font-size: 120%;
+}
+
+
+/** more than two levels*/
+
+.psk-card .psk-card .psk-card .card-header {
+  font-size: 110%;
+}
+.profile_selection{
+  background: #e8f0e0;
+}
+
+.profile_container{
+  background: #dce8d0;
+  border:1px solid #ddedce;
+}

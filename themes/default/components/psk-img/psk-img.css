@@ -1,0 +1,23 @@
+* {
+    outline: none !important;
+}
+
+:host {
+    scroll-behavior: smooth;
+}
+
+.image_container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image_description {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+:host {
+    display: block;
+    font-family: nunito;
+}

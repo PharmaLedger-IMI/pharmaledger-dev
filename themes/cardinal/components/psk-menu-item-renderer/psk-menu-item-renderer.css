@@ -1,0 +1,114 @@
+@import url("../../assets/fonts/font-awesome.min.css");
+
+div {
+    display: inline-block;
+    margin: 0;
+}
+
+div.item_container {
+    padding: 9px 20px 9px 9px;
+}
+
+a.active div,
+.dropdown.active {
+    background: #5d7d3f
+}
+
+div a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+:host([hamburger]) a div {
+    width: 100%;
+}
+
+:host([hamburger]) div.children {
+
+    position: relative;
+    background: none;
+    top: 0;
+    width: 100%;
+}
+
+:host([hamburger]) div.children .item_container {
+    padding-left: 32px;
+}
+
+span.icon {
+    padding: 10px;
+    color: #FFF
+}
+
+.children {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    max-height: 400px;
+    overflow-x: auto;
+    z-index: 200;
+    display: none;
+    background: #698d48;
+    box-shadow: 0 1px 4px #00000055;
+}
+
+@media (max-width: 960px) {
+    .children {
+        box-shadow: none;
+    }
+}
+
+.children .wrapper_container {
+    display: list-item;
+    width: 250px;
+    list-style: none;
+}
+
+:host([hamburger]) .wrapper_container,
+:host([hamburger]) .dropdown {
+    width: 100%;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown.isOpened,
+.dropdown .children {
+    background: #698d48;
+}
+
+:host([hamburger]) .dropdown.isOpened,
+:host([hamburger]) .dropdown .children {
+    background: none;
+    width: 100%;
+}
+
+.dropdown.isOpened div.children .children {
+    display: none
+}
+
+.dropdown.isOpened div.children .children {
+    left: 100%;
+    top: 0;
+}
+
+.dropdown.isOpened .wrapper_container:hover > .children {
+    display: block;
+}
+
+.children span.fa.fa-caret-down {
+    transform: rotate(270deg) translateX(-5px);
+}
+
+.dropdown.isOpened div.children {
+    display: block;
+}
+
+span.fa-caret-down {
+    padding-left: 10px;
+}
+
+.wrapper_container {
+    position: relative;
+}

@@ -1,0 +1,118 @@
+.steps {
+    float: left;
+    width: 260px;
+}
+
+.steps ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.steps li {
+    background: #b2b2b2;
+}
+
+.steps li:first-child,
+.steps li.current:first-child {
+    margin-top: 35px;
+}
+
+.steps li,
+.steps li.current {
+    position: relative;
+    margin: 0 50px 15px 40px;
+}
+
+.steps li.current {
+    background: #33a7d7;
+}
+
+.steps li.done {
+    background: #269b30;
+}
+
+.steps li .current-info {
+    display: none;
+}
+
+.steps li .button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.steps li .button .title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.steps li .button .title::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 45px solid #b2b2b2;
+}
+
+.steps li.current .title::after {
+    border-left: 45px solid #33a7d7;
+}
+
+.steps li.done .title::after {
+    border-left: 45px solid #269b30;
+}
+
+.steps li .button .title .step-icon {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+    padding: 13px 17px;
+    position: relative;
+}
+
+.steps li .button .title .step-icon::before {
+    position: absolute;
+    height: 60px;
+    width: 1px;
+    left: 100%;
+    top: 0;
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.steps li .button .step-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.steps li .button .step-text span {
+    display: block;
+}
+
+.steps li .button .step-text .step-inner {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 991px) {
+    .steps {
+        width: 95%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .steps {
+        width: 90%;
+        float: none;
+    }
+}

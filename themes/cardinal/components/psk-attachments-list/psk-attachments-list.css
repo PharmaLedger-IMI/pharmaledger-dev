@@ -1,0 +1,29 @@
+@import url("../../assets/fonts/font-awesome.min.css");
+@import url("../../assets/bootstrap/css/bootstrap.min.css");
+.fa-remove {
+    font-size: 22px;
+    padding-left: 10px;
+    font-weight: lighter;
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #7aa354;
+    border-color: #5d7d3f;
+}
+
+.btn-primary:hover,
+.btn-primary:not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(.disabled):hover{
+    background-color: #5d7d3f;
+}
+
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus
+{   background-color: #5d7d3f;
+    box-shadow: 0 0 0 0.2rem rgba(122,163,84,.3);
+}
+
+

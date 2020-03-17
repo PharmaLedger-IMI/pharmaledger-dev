@@ -1,0 +1,1 @@
+const R={RIGHT_NOW:"Right now",MINUTES:"minutes ago",HOURS:"hours ago",SECOND:1e3,MINUTE:6e4,HOUR:36e5,ALERT_PRIMARY:"alert-primary",ALERT_SECONDARY:"alert-secondary",ALERT_SUCCESS:"alert-success",ALERT_DANGER:"alert-danger",ALERT_WARNING:"alert-warning",ALERT_INFO:"alert-info",ALERT_LIGHT:"alert-light",ALERT_DARK:"alert-dark",MINUTE_TICK:4e4,HOUR_TICK:5e5};export{R as C};

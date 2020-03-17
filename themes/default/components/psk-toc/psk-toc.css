@@ -1,0 +1,29 @@
+* {
+    outline: none !important;
+}
+
+:host {
+    scroll-behavior: smooth;
+    display: block;
+    font-family: nunito;
+}
+
+.table-of-content ul li {
+    color: rgb(0, 0, 255, .75);
+    font-size: 110%;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.table-of-content ul li ul li {
+    font-size: 100%;
+    font-style: italic;
+    font-weight: 300;
+    color: rgb(0, 0, 255, .7);
+}
+
+.table-of-content ul li ul li ul li {
+    font-size: 90%;
+    color: rgb(0, 0, 255, .65);
+}

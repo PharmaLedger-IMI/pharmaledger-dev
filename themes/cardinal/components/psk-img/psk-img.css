@@ -1,0 +1,25 @@
+.image_container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image_description {
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+}
+
+psk-img.profile img{
+  border-radius:50%;
+}
+
+psk-img.profile.small img{
+  height:38px;
+  width:38px;
+}
+
+psk-img.profile .image_container,
+.profile .image_description{
+  margin:0;
+  padding: 0;
+}
