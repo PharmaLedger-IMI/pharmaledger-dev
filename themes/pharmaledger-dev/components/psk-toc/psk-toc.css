@@ -27,3 +27,21 @@
     font-size: 90%;
     color: rgb(0, 0, 255, .65);
 }
+
+psk-toc{
+    position: relative;
+    flex: 0 0 20rem;
+    height: 100%;
+
+}
+
+.table-of-content{
+    position: fixed;
+    width: 20rem;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #4e73df;
+}

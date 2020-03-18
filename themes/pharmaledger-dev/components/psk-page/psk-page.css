@@ -9,17 +9,14 @@
 }
 
 :host {
-    display: block;
-    font-family: nunito;
+    display: flex;
 }
 
 nav {
-    width: 100%;
     line-height: 4.375rem;
-    background-color: #fff !important;
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
     margin-bottom: 20px;
-    padding: 18px;
+    padding: 2rem 0;
+    margin-left: 20rem;
 }
 
 nav h3 {
@@ -32,3 +29,10 @@ nav h3 {
 .page-content {
     color: #3d3e44;
 }
+
+::slotted(psk-chapter){
+    display: flex;
+    margin-left: 20rem;
+    position: relative;
+}
+

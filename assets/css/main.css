@@ -23,6 +23,11 @@ pre {
 
 header {
   background: #7aa354;
+  width:100%;
+  position: fixed;
+  top:0;
+  height:55px;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 960px) {
@@ -30,4 +35,11 @@ header {
     position: absolute;
     margin: 8px;
   }
+}
+section{
+  margin-top: 55px;
+}
+
+psk-page{
+  display: flex;
 }

@@ -1,2 +1,87 @@
 <psk-page title="Decentralised Identitites">
+    <psk-toc title="Table of Contents"></psk-toc>
+
+
+
+<psk-chapter title="Introduction">
+    <psk-description>
+        Conventional identity management systems are based on centralized authorities such as corporate directory services, certificate authorities, or domain name registries. From the standpoint of cryptographic trust verification, each of these centralized authorities serves as its own root of trust. To make identity management work across these systems requires implementing federated identity management.
+
+        The emergence of distributed ledger technology (DLT) and blockchain technology provides the opportunity for fully decentralized identity management. In a decentralized identity system, entities (that is, discrete identifiable units such as, but not limited to, people, organizations, and things) are free to use any shared root of trust. Globally distributed ledgers, decentralized P2P networks, or other systems with similar capabilities, provide the means for managing a root of trust without introducing a centralized authority or a single point of failure. In combination, DLTs and decentralized identity management systems enable any entity to create and manage their own identifiers on any number of distributed, independent roots of trust.
+
+        Entities are identified by decentralized identifiers (DIDs), and can authenticate using proofs (for example, digital signatures, privacy-preserving biometric protocols, and so on). DIDs point to DID documents. A DID document contains a set of service endpoints for interacting with the entity that the DID identifies (that is, the DID subject). Following the guidelines of Privacy by Design, any entity can have as many DIDs (and corresponding DID documents and service endpoints) as necessary to respect the entity’s desired separation of identities, personas, and contexts (in the everyday sense of these words).
+
+        DID methods are the mechanism by which a DID and its associated DID document are created, read, updated, and deactivated on a specific distributed ledger or network. DID methods are defined using separate DID method specifications.
+
+        This design eliminates dependence on centralized registries for identifiers as well as centralized certificate authorities for key management, which is the standard in hierarchical PKI (public key infrastructure). In cases where the DID registry is a distributed ledger, each entity can serve as its own root authority. This architecture is referred to as DPKI (decentralized PKI).
+    </psk-description>
+
+
+
+    <psk-chapter title="A Simple Example">
+        This section is non-normative.
+
+        A DID is a simple text string consisting of three parts, the:
+        <psk-list>
+            URL scheme identifier (did)
+            Identifier for the DID method
+            DID method-specific identifier.
+        </psk-list>
+    </psk-chapter>
+
+    <psk-chapter title="Design Goals">
+
+        <psk-description>
+            Decentralized Identifiers are a component of larger systems, such as the Verifiable Credentials ecosystem [VC-DATA-MODEL], which drove the design goals for this specification. This section summarizes the primary design goals for this specification.
+        </psk-description>
+        <psk-list>
+            URL scheme identifier (did)
+            Identifier for the DID method
+            DID method-specific identifier.
+        </psk-list>
+
+        <psk-table header="true">
+            Goal | Description
+            Decentralization | Eliminate the requirement for centralized authorities or single point failure in identifier management, including the registration of globally unique identifiers, public verification keys, service endpoints, and other metadata.
+            Control	| Give entities, both human and non-human, the power to directly control their digital identifiers without the need to rely on external authorities.
+            Privacy	| Enable entities to control the privacy of their information, including minimal, selective, and progressive disclosure of attributes or other data.
+            Security |	Enable sufficient security for relying parties to depend on DID documents for their required level of assurance.
+        </psk-table>
+    </psk-chapter>
+
+
+</psk-chapter>
+
+    <psk-chapter title="Terminology">
+        <psk-description>
+            This document attempts to communicate the concepts outlined in the decentralized identifier space by using specialized terms to discuss specific concepts. This terminology is included below and linked to throughout the document to aid the reader:
+        </psk-description>
+    </psk-chapter>
+
+    <psk-chapter title="Overall Architecture">
+        <psk-description>
+            This document attempts to communicate the concepts outlined in the decentralized identifier space by using specialized terms to discuss specific concepts. This terminology is included below and linked to throughout the document to aid the reader:
+        </psk-description>
+
+        <psk-chapter title="DIDs">
+
+        </psk-chapter>
+
+        <psk-chapter title="DID Registries">
+
+        </psk-chapter>
+
+        <psk-chapter title="DID Documents">
+            <psk-description>
+                A DID document is the resource that is associated with a decentralized identifier (DID). DID documents typically express verification methods (such as public keys) and services that can be used to interact with a DID controller.
+
+                A DID document is serialized according to a particular syntax, as outlined in Section § 8. Core Representations). The DID itself is contained in the id property.
+
+                The properties that can be present in a DID document are outlined in Section § 3.3 DID Documents.
+
+                The properties present in a DID document can be updated according to the applicable operations outlined in Section § 9. Methods.
+            </psk-description>
+        </psk-chapter>
+    </psk-chapter>
+
 </psk-page>
