@@ -11,13 +11,51 @@
             "type": "route",
             "component": "psk-page-loader",
             "exact": true,
+            "pagePrefix": "?",
+            "historyType": "query",
             "404": "/pages/404.html"
         },
-        "pages": [{
-                "name": "Home",
-                "path": "/home",
-                "icon": "fa-home",
-                "pageSrc": "home.html"
+        "pages": [
+            {
+                "name": "About",
+                "path": "/about",
+                "pageSrc": "about.html"
+            },
+            {
+                "name": "Reports",
+                "path": "/reports",
+                "children": [
+                    {
+                        "name": "Blockchain Anchors"
+                    },
+                    {
+                        "name": "Decentralised Identitites"
+                    },
+                    {
+                        "name": "Data Sharing Units"
+                    },
+                    {
+                        "name": "Blockchain Comparations"
+                    }
+                ]
+            },
+            {
+                "name": "Open Source",
+                "path": "/open-source",
+                "children": [
+                    {
+                        "name": "Public Repositories"
+                    }
+                ]
+            },
+            {
+                "name": "Wiki",
+                "path": "/wiki",
+                "children": [
+                    {
+                        "name": "How to write Documentation"
+                    }
+                ]
             }
         ]
     }
