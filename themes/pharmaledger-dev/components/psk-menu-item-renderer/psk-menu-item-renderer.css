@@ -5,7 +5,8 @@ div {
 }
 
 div.item_container {
-    padding: 9px 20px 9px 9px;
+    line-height: 3.5rem;
+    padding: 0 1.25rem 0 0.6rem;
 }
 
 a.active div,
@@ -40,7 +41,7 @@ span.icon {
 
 .children {
     position: absolute;
-    top: 56px;
+    top: 3.5rem;
     left: 0;
     max-height: 400px;
     overflow-x: auto;
@@ -51,7 +52,7 @@ span.icon {
 
 .children .wrapper_container {
     display: list-item;
-    width: 250px;
+    width: 17rem;
     list-style: none;
 }
 

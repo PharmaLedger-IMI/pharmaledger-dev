@@ -38,7 +38,7 @@ div>.mark:visited {
 div>.mark:hover,
 div>.mark:focus,
 div>.mark:active {
-    color: #43853d;
+    color: #005A9C;
     background: none;
 }
 
@@ -57,16 +57,16 @@ psk-chapter psk-chapter .mark {
 
 .tooltip_container:hover .copy-tooltip {
     opacity: 1;
-    background-color: #224abe;
+    background-color: #005A9C;
 }
 
 .copy-tooltip {
     margin-top: 10px;
     margin-right: 35px;
     padding: 6px 12px;
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
-    background: #224abe;
+    background: #005A9C;
     display: block;
     opacity: 0;
     font-size: 13px;

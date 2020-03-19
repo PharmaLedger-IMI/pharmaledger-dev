@@ -19,41 +19,51 @@
             {
                 "name": "About",
                 "path": "/about",
+                "icon":"fa-info",
                 "pageSrc": "about.html"
             },
             {
                 "name": "Reports",
                 "path": "/reports",
+                "icon":"fa-file-text-o",
                 "children": [
                     {
-                        "name": "Blockchain Anchors"
+                        "name": "Blockchain Anchors",
+                        "icon":"fa-anchor"
                     },
                     {
-                        "name": "Decentralised Identitites"
+                        "name": "Decentralised Identitites",
+                        "icon":"fa-users"
                     },
                     {
-                        "name": "Data Sharing Units"
+                        "name": "Data Sharing Units",
+                        "icon":"fa-share-alt"
                     },
                     {
-                        "name": "Blockchain Comparations"
+                        "name": "Blockchain Comparations",
+                        "icon":"fa-balance-scale"
                     }
                 ]
             },
             {
                 "name": "Open Source",
                 "path": "/open-source",
+                "icon":"fa-code",
                 "children": [
                     {
-                        "name": "Public Repositories"
+                        "name": "Public Repositories",
+                        "icon":"fa-code-fork"
                     }
                 ]
             },
             {
                 "name": "Wiki",
                 "path": "/wiki",
+                "icon":"fa-wikipedia-w",
                 "children": [
                     {
-                        "name": "How to write Documentation"
+                        "name": "How to write Documentation",
+                        "icon":"fa-question"
                     }
                 ]
             }
