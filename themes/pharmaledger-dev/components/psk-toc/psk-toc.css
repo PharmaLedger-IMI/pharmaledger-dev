@@ -5,43 +5,65 @@
 :host {
     scroll-behavior: smooth;
     display: block;
-    font-family: nunito;
+    font-family: sans-serif;
 }
 
-.table-of-content ul li {
-    color: rgb(0, 0, 255, .75);
-    font-size: 110%;
+.table-of-content ul{
+    margin: 0;
+    padding: 0;
+}
+
+.table-of-content ul li{
     list-style: none;
     cursor: pointer;
-    text-decoration: none !important;
+}
+
+.table-of-content ul li:hover{
+    background: rgba(75%, 75%, 75%, .25);
+    border-bottom-width: 3px;
+}
+
+.table-of-content .card-body>ul > li {
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.table-of-content .card-body>ul > li:first-child{
+    margin-top: 0;
 }
 
 .table-of-content ul li ul li {
-    font-size: 100%;
-    font-style: italic;
-    font-weight: 300;
-    color: rgb(0, 0, 255, .7);
+    font-weight: normal;
 }
 
 .table-of-content ul li ul li ul li {
-    font-size: 90%;
-    color: rgb(0, 0, 255, .65);
+    font-weight: normal;
 }
 
 psk-toc{
     position: relative;
-    flex: 0 0 20rem;
+    flex: 0 0 25rem;
     height: 100%;
-
 }
 
 .table-of-content{
     position: fixed;
-    width: 20rem;
+    width: 25rem;
     display: flex;
     left: 0;
     right: 0;
-    top: 0;
+    top: 55px;
     bottom: 0;
     border-right: 1px solid #4e73df;
+    background-color: #f7f8f9;
+    padding-left: 3rem;
+    padding-top: 1rem;
+
+}
+
+.table-of-content .card-header h5{
+    text-transform: uppercase;
+    color:hsla(203,20%,40%,.7);
+    font-weight: 700;
+    font-size: 1.125rem;
 }

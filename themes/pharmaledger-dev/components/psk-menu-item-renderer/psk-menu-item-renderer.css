@@ -10,11 +10,11 @@ div.item_container {
 
 a.active div,
 .dropdown.active {
-    background: #64749A;
+    background: #bad5f0;
 }
 
 div a {
-    color: #FFF;
+    color: #005A9C;
     text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ div a {
 
 span.icon {
     padding: 10px;
-    color: #FFF
+    color: #005A9C
 }
 
 .children {
@@ -46,7 +46,7 @@ span.icon {
     overflow-x: auto;
     z-index: 200;
     display: none;
-    background: #051130;
+    background: #aacaea;
 }
 
 .children .wrapper_container {
@@ -66,7 +66,7 @@ span.icon {
 
 .dropdown.isOpened,
 .dropdown .children {
-    background: #051130;
+    background: #aacaea;
 }
 
 :host([hamburger]) .dropdown.isOpened,

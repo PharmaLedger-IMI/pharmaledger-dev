@@ -4,18 +4,24 @@
 
 :host {
     display: block;
-    font-family: nunito;
+    font-family: sans-serif;
 }
 
 .card.psk-card {
     margin-bottom: 20px;
     background: none;
     border: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .card-header {
     display: flex;
     flex: 1;
+}
+
+.card-body {
+   padding-left: 0;
 }
 
 
@@ -26,6 +32,8 @@
     border-bottom: none;
     font-size: 130%;
     padding-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .psk-card p.subtitle {
