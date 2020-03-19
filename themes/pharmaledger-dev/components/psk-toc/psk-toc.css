@@ -44,6 +44,7 @@ psk-toc{
     position: relative;
     flex: 0 0 25rem;
     height: 100%;
+    z-index: 50;
 }
 
 .table-of-content{

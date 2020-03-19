@@ -5,6 +5,7 @@
 table {
     border-spacing: 0;
     border-collapse: collapse;
+    border-bottom: 3px solid #005a9c;
 }
 
 thead,
@@ -14,6 +15,20 @@ tfoot {
 
 th,
 td {
-    border: black 1px solid;
     word-wrap: break-down;
+}
+
+th{
+    background: #005a9c;
+    color: #fff;
+    padding: 3px 5px;
+    text-align: left;
+}
+
+td{
+    padding: 3px 10px;
+    border-top: 1px solid #ddd;
+}
+tr:nth-child(even) {
+    background: #f0f6ff;
 }

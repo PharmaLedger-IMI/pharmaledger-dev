@@ -84,4 +84,26 @@
         </psk-chapter>
     </psk-chapter>
 
+    <psk-chapter title="Identifier">
+
+        <psk-description>
+            The concept of a globally unique decentralized identifier is not new. Universally Unique Identifiers (UUIDs) were first developed in the 1980s and later became a standard feature of the Open Software Foundation’s Distributed Computing Environment. UUIDs achieve global uniqueness without a centralized registry service by using an algorithm that generates 128-bit values with sufficient entropy that the chance of collision are infinitesimally small. UUIDs are formally specified in [RFC4122] as a specific type of Unified Resource Name (URN).
+        </psk-description>
+        A DID is similar to a UUID except that:
+
+        <psk-list>
+                Like a URL, it can be resolved or dereferenced to a standard resource describing the subject. That is, a DID document. For more information, see Section § 3.3 DID Documents.
+                Unlike most resources returned when dereferencing URLs, a DID document usually contains cryptographic material enabling authentication of the DID subject.
+        </psk-list>
+
+        <psk-chapter title="DID Syntax">
+            <psk-chapter title="Generic DID Syntax">
+                The generic DID scheme is a URI scheme conformant with [RFC3986].
+                The following is the ABNF definition using the syntax in [RFC5234], which defines ALPHA and DIGIT. All other rule names not defined in this ABNF are defined in [RFC3986].
+            </psk-chapter>
+
+        </psk-chapter>
+
+    </psk-chapter>
+
 </psk-page>
