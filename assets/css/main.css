@@ -1,6 +1,11 @@
 @import url("./fonts/fontawesome/font-awesome.min.css");
 @import url("./bootstrap/css/bootstrap.min.css");
 
+
+html {
+  scroll-padding-top: 5rem;
+}
+
 body {
   margin: 0;
   padding: 0;
