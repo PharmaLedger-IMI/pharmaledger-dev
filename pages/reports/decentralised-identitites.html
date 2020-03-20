@@ -102,6 +102,49 @@
                 The following is the ABNF definition using the syntax in [RFC5234], which defines ALPHA and DIGIT. All other rule names not defined in this ABNF are defined in [RFC3986].
             </psk-chapter>
 
+
+            <psk-highlight title="Issue" type-of-highlight="issue">
+                This document is undergoing a major structural refactoring and will not be easy to read. A previously published version that has a better topical flow may be a better read for people new to this work. When this document has been updated to have a better flow, this comment will be removed.
+            </psk-highlight>
+
+            The generic DID scheme is a URI scheme conformant with [RFC3986].
+            <psk-highlight title="Note" type-of-highlight="note">
+                A DID always identifies the DID subject.
+            </psk-highlight>
+
+        </psk-chapter>
+
+        <psk-chapter title="Method-Specific DID URL Parameters">
+            <psk-description>
+                A DID method specification MAY specify additional method-specific parameter names. A method-specific parameter name MUST be prefixed by the method name, as defined by the method-name rule.
+                For example, if the method did:foo: defines the parameter bar, the parameter name must be foo:bar. An example DID URL using this method and this method-specific parameter would be as shown below.
+            </psk-description>
+
+            <psk-highlight title="Example 1" type-of-highlight="example">
+                <code>
+                    did:foo:21tDAKCERh95uGgKbJNHYp;foo:bar=high
+                </code>
+            </psk-highlight>
+
+            <psk-highlight title="Example 2" type-of-highlight="example">
+                <psk-code language="json">
+                               {
+                                  "@context": "https://www.w3.org/ns/did/v1",
+                                  "id": "did:example:123456789abcdefghi",
+                                  "publicKey": [{
+                                    "id": "did:example:123456789abcdefghi#key-1",
+                                    "type": "RsaVerificationKey2018",
+                                    "controller": "did:example:123456789abcdefghi",
+                                    "publicKeyPem": "-----BEGIN PUBLIC KEY...END PUBLIC KEY-----\r\n"
+                                  }, ...],
+                                  "authentication": [
+
+                                    "#key-1"
+                                  ]
+                                }
+                </psk-code>
+            </psk-highlight>
+
         </psk-chapter>
 
     </psk-chapter>
