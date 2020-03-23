@@ -61,3 +61,20 @@
 
 }
 
+.psk-badge{
+    position: fixed;
+    width:1.75rem;
+    top:3.5rem;
+    left:0;
+    bottom:0;
+    z-index: 90;
+}
+
+.psk-badge-text{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 1rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
