@@ -35,12 +35,6 @@ header {
   display: flex;
 }
 
-@media only screen and (max-width: 960px) {
-  .website-logo {
-    position: absolute;
-    margin: 8px;
-  }
-}
 section{
   margin-top: 3.5rem;
 }
@@ -55,4 +49,20 @@ div.website-identity{
   flex: 0 0 27rem;
   color:#005A9C;
   font-size: 1.25rem;
+}
+
+
+@media only screen and (max-width: 960px) {
+  .website-logo {
+    width: 80px;
+    height: 20px;
+  }
+
+  div.website-identity {
+    line-height: 3.5rem;
+    display: inline-block;
+    flex: 0 0 15rem;
+    color: #005A9C;
+    font-size: 1rem;
+  }
 }

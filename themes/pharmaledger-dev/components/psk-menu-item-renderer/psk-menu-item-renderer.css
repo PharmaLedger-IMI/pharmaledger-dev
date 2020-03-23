@@ -59,6 +59,7 @@ span.icon {
 :host([hamburger]) .wrapper_container,
 :host([hamburger]) .dropdown {
     width: 100%;
+    overflow: hidden;
 }
 
 .dropdown {

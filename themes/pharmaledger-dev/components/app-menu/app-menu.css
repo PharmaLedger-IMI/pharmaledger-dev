@@ -10,3 +10,16 @@
 .navbar-brand {
     padding: 5px;
 }
+
+
+@media only screen and (max-width: 960px) {
+    .navbar-collapse.show {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        background: #cae1f9;
+        right: 0;
+    }
+
+}
+

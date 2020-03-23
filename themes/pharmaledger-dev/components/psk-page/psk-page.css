@@ -48,3 +48,16 @@
     width:900px;
 }
 
+@media only screen and (max-width: 960px) {
+    :host([has-toc]){
+        margin-left:0rem;
+    }
+
+    ::slotted(psk-chapter){
+        display: block
+        position: relative;
+        width:auto;
+    }
+
+}
+
