@@ -54,7 +54,7 @@
     }
 
     ::slotted(psk-chapter){
-        display: block
+        display: block;
         position: relative;
         width:auto;
     }

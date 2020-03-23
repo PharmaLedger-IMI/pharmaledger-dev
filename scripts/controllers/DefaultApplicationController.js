@@ -1,5 +1,6 @@
 import ApplicationController from "./base-controllers/ApplicationController.js";
 
+const EVENT_PREFIX = "@event:";
 const configUrl = "/app-config.json";
 
 export default class DefaultApplicationController extends ApplicationController {
@@ -76,10 +77,10 @@ export default class DefaultApplicationController extends ApplicationController 
             configuration.profile = rawConfig.profile;
         }
 
-        let filterIndexedItems = function(menuItems) {
-            for (let i = 0; i < menuItems.length; i++) {
-                if (menuItems[i].children) {
-                    filterIndexedItems(menuItems[i].children);
+        let filterIndexedItems = function (menuItems) {
+            for(let i = 0; i<menuItems.length; i++){
+                if (menuItems[i].children && menuItems[i].children.items) {
+                    filterIndexedItems(menuItems[i].children.items);
                 } else {
                     if (typeof menuItems[i].indexed !== "undefined" && menuItems[i].indexed.toString() === "false") {
                         menuItems.splice(i, 1);
@@ -131,7 +132,7 @@ export default class DefaultApplicationController extends ApplicationController 
                                 page.componentProps.pageUrl = basePagesUrl + page.pageSrc;
                             }
                         } else {
-                            let filename = page.name.replace(/[:.!?]/g,"").replace(/\s/g, '-').toLowerCase();
+                            let filename = page.name.replace(/[:.!?]/g, "").replace(/\s/g, '-').toLowerCase();
 
                             let prefix = "";
                             if (pathPrefix) {
@@ -142,8 +143,16 @@ export default class DefaultApplicationController extends ApplicationController 
                     }
                 }
 
-                if (page.children) {
-                    fillOptionalPageProps(page.children, page.path);
+                if (typeof page.children === "object" && Array.isArray(page.children)) {
+                    page.children = {type: "known", items: JSON.parse(JSON.stringify(page.children))};
+                    fillOptionalPageProps(page.children.items, page.path);
+                }
+                else{
+                    if(typeof page.children ==="string" && page.children.indexOf(EVENT_PREFIX)==0){
+                        let eventName = page.children.substring(EVENT_PREFIX.length);
+                        page.children = {type: "event", event: eventName};
+                        page.component = "psk-ssapp-loader";
+                    }
                 }
             });
             return navigationPages
@@ -163,7 +172,7 @@ export default class DefaultApplicationController extends ApplicationController 
             if (rawConfig.menu.defaultMenuConfig.pagePrefix) {
                 pagePrefix = rawConfig.menu.defaultMenuConfig.pagePrefix;
             }
-            let addPathPrefix = function(pages) {
+            let addPathPrefix = function (pages) {
                 pages.forEach(page => {
                     let pagePath = page.path;
                     if (pagePath.indexOf("/") === 0) {
@@ -171,7 +180,7 @@ export default class DefaultApplicationController extends ApplicationController 
                     }
                     page.path = `${pagePrefix}${pagePath}`;
                     if (page.children) {
-                        addPathPrefix(page.children);
+                        addPathPrefix(page.children.items);
                     }
                 });
             };
@@ -185,7 +194,7 @@ export default class DefaultApplicationController extends ApplicationController 
     }
 
     static _prepareRoutesTree(menuPages, historyType) {
-        let leafSearch = function(menu) {
+        let leafSearch = function (menu) {
             let tree = {};
             menu.forEach((leaf) => {
                 let pageName = leaf.name.replace(/(\s+|-)/g, '').toLowerCase();
@@ -206,8 +215,12 @@ export default class DefaultApplicationController extends ApplicationController 
                     };
                 }
 
-                if (leaf.children) {
-                    tree[pageName].children = leafSearch(leaf.children);
+                if (typeof leaf.children === 'object' && Array.isArray(leaf.children.items)) {
+                    tree[pageName].children = {type: "known", items: leafSearch(leaf.children.items)};
+                }
+                else if (typeof leaf.children === "string" && leaf.children.indexOf(EVENT_PREFIX) === 0) {
+                    let eventName = leaf.children.substring(EVENT_PREFIX.length);
+                    tree[pageName].children = {type: "event", event: eventName};
                 }
             });
             return tree;
@@ -227,8 +240,10 @@ export default class DefaultApplicationController extends ApplicationController 
                 break;
             }
 
-            if (root[paths[i]].children && i !== paths.length) {
-                root = root[paths[i]].children;
+            const children = root[paths[i]].children;
+
+            if (typeof children === 'object' && typeof children.items === 'object' && i !== paths.length) {
+                root = children.items;
                 continue;
             }
             callback(null, root[paths[i]].path)
