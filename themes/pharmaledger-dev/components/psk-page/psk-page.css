@@ -48,6 +48,12 @@
     width:900px;
 }
 
+
+:host(:not([has-toc])) .main-container{
+    margin:0 auto;
+    width:930px;
+}
+
 @media only screen and (max-width: 960px) {
     :host([has-toc]){
         margin-left:0rem;
