@@ -72,8 +72,9 @@
     width:1.75rem;
     top:3.5rem;
     left:0;
-    bottom:0;
     z-index: 90;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
 }
 
 .psk-badge-text{
