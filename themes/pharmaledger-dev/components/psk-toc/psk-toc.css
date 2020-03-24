@@ -103,12 +103,13 @@ psk-toc .card-body{
 }
 
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1160px) {
     .table-of-content {
         position: relative;
         background-color: transparent;
         padding-left: 3rem;
         padding-top: 1rem;
+        top:0;
     }
 
 }

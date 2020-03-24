@@ -45,7 +45,7 @@
 ::slotted(psk-chapter){
     display: flex;
     position: relative;
-    width:900px;
+    width:100%;
 }
 
 
@@ -54,9 +54,9 @@
     width:930px;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1160px) {
     :host([has-toc]){
-        margin-left:0rem;
+        margin-left:3rem;
     }
 
     ::slotted(psk-chapter){
@@ -64,8 +64,15 @@
         position: relative;
         width:auto;
     }
-
 }
+
+@media only screen and (min-width: 1161px) and (max-width: 1360px) {
+    :host([has-toc]){
+        margin-left:29rem;
+        position:relative;
+    }
+}
+
 
 .psk-badge{
     position: fixed;
@@ -84,4 +91,3 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
 }
-
