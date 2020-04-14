@@ -63,6 +63,18 @@
                 "children": [
                     {
                         "name": "How to write Documentation",
+                        "icon":"fa-question",
+                        "pageSrc": "https://privatesky.xyz/pages/howto/a-documentation-site-list.html"
+                    }
+                ]
+            },
+            {
+                "name": "Demo",
+                "path": "/Demo",
+                "icon":"fa-wikipedia-w",
+                "children": [
+                    {
+                        "name": "Demo Kubernetes",
                         "icon":"fa-question"
                     }
                 ]
