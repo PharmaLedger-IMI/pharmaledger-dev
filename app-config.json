@@ -71,7 +71,7 @@
             {
                 "name": "Demo",
                 "path": "/Demo",
-                "icon":"fa-wikipedia-w",
+                "icon":"fa-code-fork",
                 "children": [
                     {
                         "name": "Demo Kubernetes",
