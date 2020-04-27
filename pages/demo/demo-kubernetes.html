@@ -1,18 +1,12 @@
 <psk-page title="Demo App that calls various clusters">
 
-<div>
-    <label for="urlapi">Please enter URL:</label>
-    <input id="urlapi" name="urlapi" type="text">
-    <input type="button" value="Submit" onclick="redirectToEcho()">
-</div>
-<script>
-    function redirectToEcho()
-    {
-        var urlToNavigate = document.getElementById('urlapi').value;
-        window.location = urlToNavigate+'/getTestVolume';
-    }
-</script>
+<psk-form controller-name="AnchorApiController">
+    <psk-form-row >
 
+        <psk-text-input view-model="api"></psk-text-input>
+    </psk-form-row>
+    <psk-button label="Invoke AnchorAPI echo" event-name="onsubmit"></psk-button>
+</psk-form>
 
 </psk-page>
 
