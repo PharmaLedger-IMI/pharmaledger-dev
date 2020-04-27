@@ -6,8 +6,17 @@
         <psk-text-input view-model="api"></psk-text-input>
     </psk-form-row>
     <psk-button label="Invoke AnchorAPI echo" event-name="onsubmit"></psk-button>
+
+
 </psk-form>
 
+    <br/><br/>
+    At this moment we have mixed content, pharmaledger.dev is loaded over HTTPS, but the resource api we try to load is not secured. In order to access the API you can :
+    <br/><br/>
+    <ul>
+        <li>Configure the Chrome by accessing : chrome://settings/content/insecureContent .  Allow (click on Add button ) https://pharmaledger.dev </li>
+        <li>Clone the repository and run the website locally</li>
+    </ul>
 </psk-page>
 
 
