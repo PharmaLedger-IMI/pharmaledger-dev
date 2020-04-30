@@ -1,0 +1,107 @@
+<psk-page title="Anchor API using ChainCode on Hyperledger Fabric network">
+<br/>
+    <psk-toc title="Anchor API modules">
+    </psk-toc>
+
+    <psk-chapter title="Anchor Web API service">
+        <p>
+            The web service will expose operations in which, anchors defined as JSON, are stored, updated, fetched or removed. Anchors are expected in the body of the POST request.
+            All operations are executed over the Hyperledger fabric network using a smart contract. The smart contract is implemented using ChainCode and deployed on the Hyperledger fabric network.
+        </p>
+        <psk-code title="Anchor JSON structure" language="json">
+            {
+            "anchorURL":"anchor URL identifier",
+            "writeList":["publicKey1","publicKey2"],
+            "currentHash":"hash",
+            "hashes":["hash1","hash2"],
+            "timestamps":["time1","time2"],
+            "signatures":["signature 1","signature 2"]
+            }
+        </psk-code>
+        <psk-description title="Operations exposed by web api">
+            <psk-list list-type="unordered">
+                <code>POST : createAnchor</code>
+                <code>POST : updateAnchor</code>
+                <code>POST : getAnchor</code>
+                <code>POST : deleteAnchor</code>
+                <code>GET   : echo</code>
+            </psk-list>
+            <psk-highlight title="Note" type-of-highlight="note">
+                All operations will return 200 OK. All the details regarding the result of the operations are returned in JSON format.
+            </psk-highlight>
+
+        </psk-description>
+        <psk-description title="/createAnchor">
+            Will invoke the smart contract in order to store the anchor. In case the anchor already exist, an error will be returned.
+        </psk-description>
+        <psk-description title="/updateAnchor">
+            Will invoke the smart contract in order to update the anchor. In case the anchor does not exist, an error will be returned.
+        </psk-description>
+        <psk-description title="/getAnchor">
+            Will invoke the smart contract in order to get the latest version of the anchor. In case the anchor does not exist, an error will be returned.
+            <psk-code title="JSON for /getAnchor" language="json">
+                {
+                "anchorURL":"anchor URL identifier"
+                }
+            </psk-code>
+        </psk-description>
+        <psk-description title="/deleteAnchor">
+            Will invoke the smart contract in order to delete the anchor. In case the anchor does not exist, an error will be returned.
+            <psk-code title="JSON for /deleteAnchor" language="json">
+                {
+                "anchorURL":"anchor URL identifier"
+                }
+            </psk-code>
+        </psk-description>
+        <psk-description title="/echo">
+            Will return a simple JSON, no other interactions are made during this call.
+            <psk-code title="JSON returned" language="json">
+                {
+                "content" : "Echo from the Anchoring API",
+                "status" : 200
+                }
+            </psk-code>
+        </psk-description>
+    </psk-chapter>
+
+    <psk-chapter title="User authorization over Hyperledger fabric network">
+        When an operation, which requires interaction with the Hyperledger fabric network, is executed, a check is made to ensure that the user which will invoke the smart contract is authorized.
+        In case the authorization details are not found, will attempt to obtain the authorization from the network.
+    </psk-chapter>
+
+    <psk-chapter title="Interactions with Hyperledger fabric network using chaincode">
+        The web API will access the interface defined for the smart contract. Based on the invoked method the api will request submitTransaction or evaluateTransaction, which will result in reading or commit information to the ledger.
+        In case of success or error, the information will be enclosed in the returned JSON by API. Invoked methods will be made by name, the smart contract will evaluate if the method is implemented and the parameters provided are correct.
+    </psk-chapter>
+
+    <psk-chapter title="AnchorChainCode smart contract">
+        <psk-description title="Operations implemented">
+            <psk-list list-type="unordered">
+                <code>Init</code>
+                <code>AddAnchor</code>
+                <code>GetAnchor</code>
+                <code>DeleteAnchor</code>
+                <code>UpdateAnchor</code>
+            </psk-list>
+            <psk-highlight title="Note" type-of-highlight="note">
+                The invoker of the method will know which peer throws an error, based on smart contract validation rules.
+            </psk-highlight>
+        </psk-description>
+        <psk-description title="Init">
+            Called when the smart contract is initialized.
+        </psk-description>
+
+        <psk-description title="AddAnchor">
+            Will check if the anchor is already defined on the ledger. In case is not, will be added, otherwise will throw and error.
+        </psk-description>
+        <psk-description title="GetAnchor">
+            Will check if the anchor is already defined on the ledger. In case it is , will return the contents stored on the ledger, otherwise will throw and error.
+        </psk-description>
+        <psk-description title="DeleteAnchor">
+            Will check if the anchor is already defined on the ledger. In case it is , will delete the contents stored on the ledger, otherwise will throw and error.
+        </psk-description>
+        <psk-description title="UpdateAnchor">
+            Will check if the anchor is already defined on the ledger. In case it is , will update the contents stored on the ledger, otherwise will throw and error.
+        </psk-description>
+    </psk-chapter>
+</psk-page>
