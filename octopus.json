@@ -97,6 +97,10 @@
           "target": "./temp/cardinal-w3c-theme/README.md"
         },
         {
+          "type": "remove",
+          "target": "./temp/cardinal-w3c-theme/.git"
+        },
+        {
           "type": "copy",
           "src": "./temp/cardinal-w3c-theme",
           "target": "./themes/cardinal-w3c-theme",
