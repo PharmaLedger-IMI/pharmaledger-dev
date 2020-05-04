@@ -1,0 +1,75 @@
+{
+  "workDir": ".",
+  "dependencies": [
+	{
+	  "name": "privatesky",
+	  "src": "https://github.com/privatesky/privatesky.git",
+	  "actions": [
+		{
+		  "type": "smartClone",
+		  "target": "./temp",
+		  "collectLog": false
+		},
+		{
+		  "type": "execute",
+		  "cmd": "cd ./temp/privatesky && npm install && npm run build"
+		},
+		{
+		  "type": "copy",
+		  "src": "./temp/privatesky/psknode/bundles/webshims.js",
+		  "target": "./scripts/bundles/webshims.js",
+		  "options": {
+			"overwrite": true
+		  }
+		},
+		{
+		  "type": "copy",
+		  "src": "./temp/privatesky/psknode/bundles/pskruntime.js",
+		  "target": "./scripts/bundles/pskruntime.js",
+		  "options": {
+			"overwrite": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "name": "cardinal",
+	  "src": "https://github.com/privatesky/cardinal.git",
+	  "actions": [
+		{
+		  "type": "smartClone",
+		  "target": "./temp",
+		  "collectLog": false
+		},
+		{
+		  "type": "execute",
+		  "cmd": "cd ./temp/cardinal && npm install && npm run build"
+		},
+		{
+		  "type": "copy",
+		  "src": "./temp/cardinal/dist/cardinal",
+		  "target": "./cardinal",
+		  "options": {
+			"overwrite": true
+		  }
+		},
+		{
+		  "type": "copy",
+		  "src": "./temp/cardinal/dist/cardinal.js",
+		  "target": "./cardinal.js",
+		  "options": {
+			"overwrite": true
+		  }
+		},
+		{
+		  "type": "remove",
+		  "target": "./temp"
+		},
+		{
+		  "type": "remove",
+		  "target": "./latest-change-set.txt"
+		}
+	  ]
+	}
+  ]
+}
