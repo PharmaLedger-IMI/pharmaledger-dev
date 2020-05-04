@@ -89,12 +89,12 @@ export default class AppConfigurationHelper {
           page.path = pagePath;
         }
 
-        if (pathPrefix) {
-          page.path = pathPrefix + "/" + page.path;
-        } else {
-          if (page.path.indexOf("/") !== 0) {
+        if (page.path.indexOf("/") !== 0) {
             page.path = "/" + page.path;
-          }
+        }
+
+        if (pathPrefix) {
+          page.path = pathPrefix  + page.path;
         }
 
         if (page.children) {
@@ -178,13 +178,20 @@ export default class AppConfigurationHelper {
       addPathPrefix(configuration.routes);
     }
 
-    let getPagesKeywords = function (routes) {
-      let keywordsDictionary = [];
+    let getPagesTags = function (routes) {
+      let tagsDictionary = [];
 
       function iterateThroughRoutes(routes) {
         routes.forEach((route) => {
-            if (Object.prototype.hasOwnProperty.call(route, 'keyword')) {
-              keywordsDictionary[route['keyword']] = route.path;
+            if (Object.prototype.hasOwnProperty.call(route, 'tags')) {
+
+              let routeTags = route['tags'].split(",").map(tag => tag.trim());
+
+              routeTags.forEach((tag)=>{
+                //we don't care if we overwrite a previous path
+                tagsDictionary[tag] = route.path;
+              })
+
             }
             if (typeof route.children === 'object' && Array.isArray(route.children.items)) {
               iterateThroughRoutes(route.children.items);
@@ -195,12 +202,12 @@ export default class AppConfigurationHelper {
 
       iterateThroughRoutes(routes);
 
-      return keywordsDictionary;
+      return tagsDictionary;
     };
 
     let routes = JSON.parse(JSON.stringify(configuration.routes));
     configuration.menu = filterIndexedItems(routes);
-    configuration.keywords = getPagesKeywords(routes);
+    configuration.tags = getPagesTags(routes);
     configuration.pagesHierarchy = AppConfigurationHelper._prepareRoutesTree(configuration.routes, historyType);
     return configuration;
   }

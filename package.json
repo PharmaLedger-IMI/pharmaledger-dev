@@ -1,12 +1,15 @@
 {
-    "name": "Cardinal.Js",
-    "version": "1.0.0",
-    "description": "Cardinal.Js - PrivateSky Website Core for building self sovereign applications",
-    "scripts": {
-        "web": "ws --spa ./index.html"
-    },
-    "devDependencies": {
-        "local-web-server": "^3.0.7"
-    },
-    "license": "MIT"
+  "name": "pharmaledger-dev",
+  "version": "1.0.0",
+  "description": "PharmaLedger-Development website",
+  "scripts": {
+    "postinstall": "node ./node_modules/octopus/scripts/run",
+    "update": "npm run install",
+    "web": "ws --spa ./index.html"
+  },
+  "dependencies": {
+    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.2",
+    "local-web-server": "^3.0.7"
+  },
+  "license": "MIT"
 }
