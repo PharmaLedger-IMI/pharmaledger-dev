@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "local-web-server": "^3.0.7",
-    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.2"
+    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.3"
   },
   "license": "MIT"
 }

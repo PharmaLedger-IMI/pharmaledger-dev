@@ -90,10 +90,6 @@
         },
         {
           "type": "remove",
-          "target": "./temp/cardinal-w3c-theme/LICENSE"
-        },
-        {
-          "type": "remove",
           "target": "./temp/cardinal-w3c-theme/README.md"
         },
         {
