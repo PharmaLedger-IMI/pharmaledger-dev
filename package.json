@@ -4,7 +4,8 @@
   "description": "PharmaLedger-Development website",
   "scripts": {
     "postinstall": "node ./node_modules/octopus/scripts/run",
-    "update": "npm run install",
+    "update": "npm install",
+    "update-theme": "node ./node_modules/octopus/scripts/run update-theme",
     "web": "ws --spa ./index.html"
   },
   "dependencies": {

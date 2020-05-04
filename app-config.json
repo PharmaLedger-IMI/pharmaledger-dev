@@ -1,6 +1,6 @@
 {
     "basePagesUrl": "/pages/",
-    "theme":"pharmaledger-dev",
+    "theme":"cardinal-w3c-theme",
     "profile": {
         "username": "Cardinal",
         "email": "cardinal@axiologic.net",
