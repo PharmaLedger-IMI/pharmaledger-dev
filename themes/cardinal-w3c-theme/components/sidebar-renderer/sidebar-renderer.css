@@ -1,0 +1,104 @@
+
+:host {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: block;
+    font-size: 16px;
+}
+
+span.icon {
+    color: rgba(255, 255, 255, .6);
+    margin-right: 10px;
+}
+
+.expand-menu {
+    position: absolute;
+    right: 5px;
+    top: 22px
+}
+
+.wrapper_container {
+    display: inline-block;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item_container {
+    width: 100%;
+    position: relative;
+    padding: 20px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+a,
+a span.icon,
+.item_container .item_name {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+a.active,
+.dropdown.isOpened>.item_container>.item_name {
+    font-weight: 700;
+}
+
+a:hover,
+.item_container:hover>.item_name,
+.item_container:hover>span.icon,
+.dropdown.active>.wrapper_container>.item_container>span.icon,
+.dropdown.isOpened>.wrapper_container>.item_container>span.icon,
+.dropdown.active>.wrapper_container>.item_container>span.item_name,
+.dropdown.isOpened>.wrapper_container>.item_container>span.item_name,
+a:hover span.icon,
+a.active .item_name,
+a.active span.icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+.children {
+    position: relative;
+    display: none;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.children .wrapper_container {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+:host([active]) .children,
+.dropdown.isOpened .wrapper_container>.children {
+    display: block;
+}
+
+.dropdown.isOpened .fa-caret-right.expand-menu {
+    transform: rotate(90deg);
+}
+
+:host([hamburger]) a div {
+    width: 100%;
+}
+
+:host([hamburger]) div.children {
+    position: relative;
+    background: none;
+    top: 0;
+    width: 100%;
+}
+
+:host([hamburger]) div.children .item_container {
+    padding-left: 32px;
+}
+
+:host([hamburger]) .wrapper_container,
+:host([hamburger]) .dropdown {
+    width: 100%;
+}

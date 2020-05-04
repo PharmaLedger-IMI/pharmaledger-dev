@@ -1,0 +1,21 @@
+
+* {
+    outline: none !important;
+}
+
+:host {
+    margin-block-start: -0.25rem;
+    margin-inline-end: 0px;
+}
+
+.btn,
+:host>* {
+    font-size: 10px;
+    padding: 0.25rem;
+    margin: 0.2rem;
+}
+
+:host psk-icon {
+    font-size: 1.25rem;
+    cursor: pointer;
+}

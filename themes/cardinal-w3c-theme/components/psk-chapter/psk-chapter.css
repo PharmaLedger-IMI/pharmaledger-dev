@@ -1,0 +1,33 @@
+
+
+h5 {
+    color: #005A9C;
+}
+
+psk-chapter .card-body {
+    padding-left: 0;
+}
+
+psk-chapter h5 {
+    font-size: 1.5rem;
+}
+
+psk-chapter psk-chapter h5 {
+    font-size: 1.25rem;
+}
+
+
+psk-chapter psk-chapter psk-chapter h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+psk-list ul {
+    margin-top: 1rem;
+}
+
+psk-list ul li {
+    margin-top: 0.5rem;
+}
+

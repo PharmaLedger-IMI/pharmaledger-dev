@@ -1,0 +1,107 @@
+
+div {
+    display: inline-block;
+    margin: 0;
+}
+
+div.item_container {
+    line-height: 3.5rem;
+    padding: 0 1.25rem 0 0.6rem;
+}
+
+a.active div,
+.dropdown.active {
+    background: #bad5f0;
+}
+
+div a {
+    color: #005A9C;
+    text-decoration: none;
+}
+
+:host([hamburger]) a div {
+    width: 100%;
+}
+
+:host([hamburger]) div.children {
+    position: relative;
+    background: none;
+    top: 0;
+    width: 100%;
+}
+
+:host([hamburger]) div.children .item_container {
+    padding-left: 32px;
+}
+
+span.icon {
+    padding: 10px;
+    color: #005A9C
+}
+
+.children {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    max-height: 400px;
+    overflow-x: auto;
+    z-index: 200;
+    display: none;
+    background: #aacaea;
+}
+
+.children .wrapper_container {
+    display: list-item;
+    width: 17rem;
+    list-style: none;
+}
+
+:host([hamburger]) .wrapper_container,
+:host([hamburger]) .dropdown {
+    width: 100%;
+    overflow: hidden;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown.isOpened,
+.dropdown .children {
+    background: #aacaea;
+}
+
+:host([hamburger]) .dropdown.isOpened,
+:host([hamburger]) .dropdown .children {
+    background: none;
+    width: 100%;
+}
+
+.dropdown.isOpened div.children .children {
+    display: none
+}
+
+.dropdown.isOpened div.children .children {
+    left: 100%;
+    top: 0;
+}
+
+.dropdown.isOpened .wrapper_container:hover>.children {
+    display: block;
+}
+
+.children span.fa.fa-caret-down {
+    transform: rotate(270deg) translateX(-5px);
+}
+
+.dropdown.isOpened div.children {
+    display: block;
+}
+
+span.fa-caret-down {
+    padding-left: 10px;
+}
+
+.wrapper_container {
+    position: relative;
+}

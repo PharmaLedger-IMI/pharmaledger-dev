@@ -1,0 +1,10 @@
+
+:host {
+    font-size: 20px;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.icon.disable-color {
+    color: #999 !important;
+}

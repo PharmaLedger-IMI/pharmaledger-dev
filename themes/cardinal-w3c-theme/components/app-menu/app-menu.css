@@ -1,0 +1,29 @@
+
+:host {
+    width: 100%;
+}
+
+.navbar {
+    padding: .5rem 1rem .5rem 0;
+}
+
+.navbar-brand {
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 1160px) {
+    .navbar-collapse.show {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        background: #cae1f9;
+        right: 0;
+    }
+
+}
+
+.navbar-dark .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,90,156, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
