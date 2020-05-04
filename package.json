@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "PharmaLedger-Development website",
   "scripts": {
-    "postinstall": "node ./node_modules/octopus/scripts/run",
-    "update": "npm install",
     "update-theme": "node ./node_modules/octopus/scripts/run update-theme",
+    "update-cardinal": "node ./node_modules/octopus/scripts/run update-cardinal",
+    "postinstall": "node ./node_modules/octopus/scripts/run && npm run update-cardinal && npm run update-theme ",
+    "update": "npm install",
     "web": "ws --spa ./index.html"
   },
   "dependencies": {
-    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.2",
-    "local-web-server": "^3.0.7"
+    "local-web-server": "^3.0.7",
+    "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.2"
   },
   "license": "MIT"
 }

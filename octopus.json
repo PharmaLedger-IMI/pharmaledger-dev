@@ -29,9 +29,15 @@
           "options": {
             "overwrite": true
           }
+        },
+        {
+          "type": "remove",
+          "target": "./temp"
         }
       ]
-    },
+    }
+  ],
+  "update-cardinal": [
     {
       "name": "cardinal",
       "src": "https://github.com/privatesky/cardinal.git",
@@ -72,31 +78,37 @@
       ]
     }
   ],
-  "update-theme": [{
-    "name": "cardinal-w3c-theme",
-    "src": "https://github.com/privatesky/cardinal-w3c-theme.git",
-    "actions": [
-      {
-        "type": "smartClone",
-        "target": "./temp",
-        "collectLog": false
-      },
-      {
-        "type": "copy",
-        "src": "./temp/cardinal-w3c-theme",
-        "target": "./themes/cardinal-w3c-theme",
-        "options": {
-          "overwrite": true
+  "update-theme": [
+    {
+      "name": "cardinal-w3c-theme",
+      "src": "https://github.com/privatesky/cardinal-w3c-theme.git",
+      "actions": [
+        {
+          "type": "smartClone",
+          "target": "./temp",
+          "collectLog": false
+        },
+        {
+          "type": "remove",
+          "target": "./temp/cardinal-w3c-theme/LICENSE"
+        },
+        {
+          "type": "remove",
+          "target": "./temp/cardinal-w3c-theme/README.md"
+        },
+        {
+          "type": "copy",
+          "src": "./temp/cardinal-w3c-theme",
+          "target": "./themes/cardinal-w3c-theme",
+          "options": {
+            "overwrite": true
+          }
+        },
+        {
+          "type": "remove",
+          "target": "./temp"
         }
-      },
-      {
-        "type": "remove",
-        "target": "./themes/cardinal-w3c-theme/LICENSE"
-      },
-      {
-        "type": "remove",
-        "target": "./themes/cardinal-w3c-theme/README.md"
-      }
-    ]
-  }]
+      ]
+    }
+  ]
 }
