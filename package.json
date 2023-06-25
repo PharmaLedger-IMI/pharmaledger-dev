@@ -10,7 +10,7 @@
     "web": "ws --spa ./index.html"
   },
   "dependencies": {
-    "local-web-server": "^3.0.7",
+    "local-web-server": "^5.3.0",
     "octopus": "git+https://github.com/PrivateSky/octopus.git#1.0.3"
   },
   "license": "MIT"
